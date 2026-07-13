@@ -502,8 +502,9 @@
           throw new Error("posts.json 파일을 찾을 수 없습니다.");
         }
 
-        const posts = await response.json();
-
+        const data = await response.json();
+        const posts = Array.isArray(data) ? data : data.posts;
+        
         if (!Array.isArray(posts) || posts.length === 0) {
           throw new Error("표시할 글이 없습니다.");
         }
