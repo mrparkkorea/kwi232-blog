@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>사진일기와 메모</title>
+
+  <meta
+    name="description"
+    content="인도네시아 여행, 현지 생활, 항공, 호텔과 일상의 기록을 담은 사진일기와 메모입니다."
+  >
+
+  <meta name="robots" content="index, follow">
+
+  <link
+    rel="canonical"
+    href="https://mrparkkorea.github.io/kwi232-blog/"
+  >
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="사진일기와 메모">
+  <meta
+    property="og:description"
+    content="인도네시아 여행과 생활의 순간을 사진과 글로 기록합니다."
+  >
+  <meta
+    property="og:url"
+    content="https://mrparkkorea.github.io/kwi232-blog/"
+  >
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #f5f5f2;
+      color: #282828;
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Pretendard",
+        "Noto Sans KR",
+        "Apple SD Gothic Neo",
+        "Malgun Gothic",
+        sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .header-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 22px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      font-size: 23px;
+      font-weight: 800;
+      letter-spacing: -0.8px;
+    }
+
+    nav {
+      display: flex;
+      gap: 22px;
+      font-size: 14px;
+      color: #555555;
+    }
+
+    nav a:hover {
+      color: #000000;
+    }
+
+    .hero {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 80px 24px 65px;
+    }
+
+    .hero-label {
+      margin-bottom: 13px;
+      color: #777777;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(38px, 7vw, 68px);
+      line-height: 1.15;
+      letter-spacing: -3px;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 26px 0 0;
+      color: #666666;
+      font-size: 17px;
+      word-break: keep-all;
+    }
+
+    .hero-buttons {
+      margin-top: 34px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .button-primary {
+      background: #222222;
+      color: #ffffff;
+    }
+
+    .button-primary:hover {
+      background: #000000;
+      transform: translateY(-1px);
+    }
+
+    .button-secondary {
+      background: #ffffff;
+      border: 1px solid #d8d8d8;
+    }
+
+    .button-secondary:hover {
+      border-color: #999999;
+      transform: translateY(-1px);
+    }
+
+    main {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    .section {
+      margin-top: 30px;
+    }
+
+    .section-header {
+      margin-bottom: 22px;
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .section-title {
+      margin: 0;
+      font-size: 25px;
+      letter-spacing: -1px;
+    }
+
+    .section-description {
+      margin: 6px 0 0;
+      color: #777777;
+      font-size: 14px;
+    }
+
+    .section-link {
+      flex-shrink: 0;
+      color: #666666;
+      font-size: 14px;
+    }
+
+    .section-link:hover {
+      text-decoration: underline;
+    }
+
+    .post-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .post-card {
+      min-height: 215px;
+      padding: 24px;
+      background: #ffffff;
+      border: 1px solid #e5e5e5;
+      border-radius: 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: 0.2s ease;
+    }
+
+    .post-card:hover {
+      border-color: #bdbdbd;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+    }
+
+    .post-category {
+      color: #888888;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .post-title {
+      margin: 16px 0 0;
+      font-size: 19px;
+      line-height: 1.45;
+      letter-spacing: -0.5px;
+      word-break: keep-all;
+    }
+
+    .post-date {
+      margin-top: 25px;
+      color: #999999;
+      font-size: 12px;
+    }
+
+    .notice {
+      padding: 32px;
+      background: #ffffff;
+      border: 1px solid #e5e5e5;
+      border-radius: 14px;
+      text-align: center;
+    }
+
+    .notice strong {
+      display: block;
+      font-size: 18px;
+    }
+
+    .notice p {
+      margin: 8px 0 0;
+      color: #777777;
+      font-size: 14px;
+    }
+
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .category-card {
+      padding: 22px;
+      background: #ffffff;
+      border: 1px solid #e5e5e5;
+      border-radius: 12px;
+    }
+
+    .category-card strong {
+      display: block;
+      font-size: 16px;
+    }
+
+    .category-card span {
+      display: block;
+      margin-top: 5px;
+      color: #888888;
+      font-size: 13px;
+    }
+
+    footer {
+      border-top: 1px solid #dddddd;
+      background: #eeeeeb;
+    }
+
+    .footer-inner {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 32px 24px;
+      color: #777777;
+      font-size: 13px;
+    }
+
+    .footer-links {
+      margin-top: 7px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-links a:hover {
+      color: #222222;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 800px) {
+      .header-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav {
+        gap: 15px;
+      }
+
+      .hero {
+        padding-top: 58px;
+      }
+
+      .hero h1 {
+        letter-spacing: -2px;
+      }
+
+      .post-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .category-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section-header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a class="logo" href="./">사진일기와 메모</a>
+
+      <nav aria-label="주요 메뉴">
+        <a href="#latest">최신 글</a>
+        <a href="#categories">주제별 기록</a>
+        <a
+          href="https://blog.naver.com/kwi232"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          네이버 블로그
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-label">PHOTO DIARY & NOTES</div>
+
+    <h1>사진일기와 메모</h1>
+
+    <p>
+      인도네시아에서 생활하며 직접 경험한 여행, 항공, 호텔,
+      현지 생활과 일상의 순간을 사진과 글로 기록합니다.
+    </p>
+
+    <div class="hero-buttons">
+      <a
+        class="button button-primary"
+        href="https://blog.naver.com/kwi232"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        네이버 블로그 보기
+      </a>
+
+      <a
+        class="button button-secondary"
+        href="https://rss.blog.naver.com/kwi232.xml"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        RSS 보기
+      </a>
+    </div>
+  </section>
+
+  <main>
+
+    <section class="section" id="latest">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">최신 글</h2>
+          <p class="section-description">
+            네이버 블로그의 최신 글을 이곳에 자동으로 불러올 예정입니다.
+          </p>
+        </div>
+
+        <a
+          class="section-link"
+          href="https://blog.naver.com/kwi232"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          전체 글 보기 →
+        </a>
+      </div>
+
+      <div id="post-list" class="post-grid"></div>
+
+      <div id="loading-message" class="notice">
+        <strong>최신 글 자동 연결 준비 중</strong>
+        <p>
+          다음 단계에서 네이버 RSS와 연결하면 새 글이 이곳에 자동으로 표시됩니다.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="categories">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">주제별 기록</h2>
+          <p class="section-description">
+            여행과 생활 속에서 직접 보고 경험한 내용을 정리합니다.
+          </p>
+        </div>
+      </div>
+
+      <div class="category-grid">
+        <div class="category-card">
+          <strong>인도네시아 여행</strong>
+          <span>도시, 관광지, 여행 코스</span>
+        </div>
+
+        <div class="category-card">
+          <strong>항공과 교통</strong>
+          <span>항공편, 공항, 이동 정보</span>
+        </div>
+
+        <div class="category-card">
+          <strong>호텔과 크루즈</strong>
+          <span>숙소와 선박 여행 기록</span>
+        </div>
+
+        <div class="category-card">
+          <strong>현지 생활</strong>
+          <span>인도네시아 생활과 일상</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      © <span id="year"></span> 사진일기와 메모
+
+      <div class="footer-links">
+        <a
+          href="https://blog.naver.com/kwi232"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          네이버 블로그
+        </a>
+
+        <a
+          href="https://rss.blog.naver.com/kwi232.xml"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          RSS
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    async function loadPosts() {
+      const postList = document.getElementById("post-list");
+      const loadingMessage =
+        document.getElementById("loading-message");
+
+      try {
+        const response = await fetch("./posts.json", {
+          cache: "no-store"
+        });
+
+        if (!response.ok) {
+          throw new Error("posts.json 파일을 찾을 수 없습니다.");
+        }
+
+        const posts = await response.json();
+
+        if (!Array.isArray(posts) || posts.length === 0) {
+          throw new Error("표시할 글이 없습니다.");
+        }
+
+        postList.innerHTML = posts.slice(0, 9).map((post) => `
+          <a
+            class="post-card"
+            href="${post.link}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div>
+              <div class="post-category">
+                ${post.category || "네이버 블로그"}
+              </div>
+
+              <h3 class="post-title">
+                ${post.title}
+              </h3>
+            </div>
+
+            <div class="post-date">
+              ${post.date || ""}
+            </div>
+          </a>
+        `).join("");
+
+        loadingMessage.style.display = "none";
+
+      } catch (error) {
+        console.log(error.message);
+      }
+    }
+
+    loadPosts();
+  </script>
+
+</body>
+</html>
