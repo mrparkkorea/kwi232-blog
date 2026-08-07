@@ -1,6 +1,13 @@
 {
-  "updated_at": "2026-08-07T01:53:24",
+  "updated_at": "2026-08-07T09:40:33",
   "posts": [
+    {
+      "title": "영화 「접속」이 다시 떠올리게 한 명곡, A Lover's Concerto",
+      "link": "https://blog.naver.com/kwi232/224343247817?fromRss=true&trackingCode=rss",
+      "description": "얼마 전 오랜만에 영화 을 다시 보았다. 1997년 개봉 당시에도 큰 사랑을 받았지만, 시간이 흐른 뒤 다시 보니 그 시절만의 아날로그 감성이 더욱 깊게 다가왔다. 삐삐와 PC통신, 얼굴보다 목소리가 먼저 닿던 시대. 지금의 SNS와는 전혀 다른 방식의 설렘이 영화 곳곳에 스며 있다. 그리고 영화를 보고 난 뒤 가장 오래",
+      "date": "2026.08.07",
+      "category": "잡다한 생각들"
+    },
     {
       "title": "다이소 종근당 Daily Wise 데일리와이즈 혈당컷 다이어트 내돈내산 후기! 부담 없이 시작해 본 혈당 관리",
       "link": "https://blog.naver.com/kwi232/224367161456?fromRss=true&trackingCode=rss",
@@ -201,13 +208,6 @@
       "title": "농막에 와이파이 설치하기1(CCTV, 라우터 성공기)",
       "link": "https://blog.naver.com/kwi232/223294694053?fromRss=true&trackingCode=rss",
       "description": "우리 농막에는 인터넷선이 없다. 안들어오는 것은 아니고, 유선인터넷이 저~~~안쪽 골짜기까지 들어가 있지만 쓸 필요가 없어서다. LTE 라우터를 이용해서 WIFI ZONE을 만들었기때문이다. 농막에 갈때만 인터넷이 필요하다면 휴대폰 테더링으로 갈때마다 사용해도 상관은 없지만 CCTV를 원격으로 확인하기 위해서는 무선 인터",
-      "date": "2023.12.16",
-      "category": "나의 모노폴리 일지"
-    },
-    {
-      "title": "농막에 와이파이 설치하기2(CCTV, 라우터 성공기)",
-      "link": "https://blog.naver.com/kwi232/223294639201?fromRss=true&trackingCode=rss",
-      "description": "유선인터넷 연결 후, 와이파이를 퍼뜨리는 것과 무선인터넷 기기로 와이파이를 퍼뜨리는 것을 비교해 보았다. https://blog.naver.com/kwi232/223294694053 아래는 일단 돈이 적게드는 무선인터넷(유심)으로 와이파이존을 만들겠다고 마음을 먹고 시도한 방법들을 소개 해 보겠다. 첫번째로 시도한 방법,",
       "date": "2023.12.16",
       "category": "나의 모노폴리 일지"
     }
