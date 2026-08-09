@@ -1,6 +1,13 @@
 {
-  "updated_at": "2026-08-08T19:46:34",
+  "updated_at": "2026-08-09T04:48:17",
   "posts": [
+    {
+      "title": "하하물안경, 스피도 Sunny G 선글라스 물안경 구입기! 인도네시아 실 구입가!",
+      "link": "https://blog.naver.com/kwi232/224371907988?fromRss=true&trackingCode=rss",
+      "description": "수영장에서 선글라스를 쓴다고? 스피도 Sunny G 선글라스 물안경 얼마전 유튜브에서 하하가 선글라스처럼 생긴 독특한 물안경을 쓰고 있는 모습을 본 적이 있습니다. https://youtu.be/8VB2pqEMDAw?si=aZFbdYI8ILJ9WaTA 처음 봤을 때는 정말 선글라스를 쓰고 물에 들어간 줄 알았는데요. 일반",
+      "date": "2026.08.09",
+      "category": "인도네시아 라이프"
+    },
     {
       "title": "영화 「접속」이 다시 떠올리게 한 명곡, A Lover's Concerto",
       "link": "https://blog.naver.com/kwi232/224343247817?fromRss=true&trackingCode=rss",
@@ -203,13 +210,6 @@
       "description": "서대구역 시외버스 최신(2023년 12월 기준) 올해 겨울엔 이상하리 만큼 긴 겨울 장마가 왔다. 그리곤, 강풍을 동반한 엄청난 추위가 찾아왔고.. 오늘 가본 서대구역은 도심지라 그런지 다른 곳 보다는 덜 추운듯 했지만 강풍은 여전했다. 서대구역 시외버스 승강장 위치와 발매기 위치는 아래의 이전 글을 참고 군위 평일 기준",
       "date": "2023.12.18",
       "category": "팔도강산 국내여행"
-    },
-    {
-      "title": "농막에 와이파이 설치하기1(CCTV, 라우터 성공기)",
-      "link": "https://blog.naver.com/kwi232/223294694053?fromRss=true&trackingCode=rss",
-      "description": "우리 농막에는 인터넷선이 없다. 안들어오는 것은 아니고, 유선인터넷이 저~~~안쪽 골짜기까지 들어가 있지만 쓸 필요가 없어서다. LTE 라우터를 이용해서 WIFI ZONE을 만들었기때문이다. 농막에 갈때만 인터넷이 필요하다면 휴대폰 테더링으로 갈때마다 사용해도 상관은 없지만 CCTV를 원격으로 확인하기 위해서는 무선 인터",
-      "date": "2023.12.16",
-      "category": "나의 모노폴리 일지"
     }
   ]
 }
